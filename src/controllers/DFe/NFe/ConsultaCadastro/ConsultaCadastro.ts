@@ -7,7 +7,7 @@ import { AxiosInstance, AxiosResponse } from 'axios';
 
 class ConsultaCadastro extends BaseNFE {
     constructor(environment: Environment, utility: Utility, xmlBuilder: XmlBuilder, axios: AxiosInstance) {
-        super(environment, utility, xmlBuilder, 'ConsultaCadastro', axios);
+        super(environment, utility, xmlBuilder, 'consultarCadastro', axios);
     }
 
     protected gerarXml(chave: string): string {
