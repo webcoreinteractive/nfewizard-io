@@ -5,7 +5,7 @@ import BaseNFE from '../BaseNFe/BaseNFe.js';
 import { GenericObject } from '@Protocols/index.js';
 import { AxiosInstance, AxiosResponse } from 'axios';
 
-class ConsultaCadastro extends BaseNFE {
+class ConsultarCadastro extends BaseNFE {
     constructor(environment: Environment, utility: Utility, xmlBuilder: XmlBuilder, axios: AxiosInstance) {
         super(environment, utility, xmlBuilder, 'consultarCadastro', axios);
     }
@@ -41,4 +41,4 @@ class ConsultaCadastro extends BaseNFE {
 
 }
 
-export default ConsultaCadastro;
+export default ConsultarCadastro;

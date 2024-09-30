@@ -19,6 +19,7 @@ import NFERecepcaoEvento from '../controllers/DFe/NFe/NFERecepcaoEvento/NFERecep
 import NFEStatusServico from '../controllers/DFe/NFe/NFEStatusServico/NFEStatusServico';
 import NFEDistribuicaoDFe from '../controllers/DFe/NFe/NFEDistribuicaoDFe/NFEDistribuicaoDFe';
 import NFEConsultaProtocolo from '../controllers/DFe/NFe/NFEConsultaProtocolo/NFEconsultaProtocolo';
+import ConsultarCadastro from '../controllers/DFe/NFe/ConsultarCadastro/ConsultarCadastro';
 import Utility from '../utils/Utility';
 import Environment from './Environment';
 import XmlBuilder from './XmlBuilder';
@@ -155,6 +156,21 @@ class NFeWizard {
             return response
         } catch (error: any) {
             throw new Error(`NFE_ConsultaProtocolo: ${error.message}`)
+        }
+    }
+
+    async NFE_ConsultaCadastro(chave: string) {
+        try {
+            const consultaCadastro = new ConsultarCadastro(this.environment, this.utility, this.xmlBuilder, this.axios);
+            const response = await consultaCadastro.Exec(chave);
+
+            console.log('Retorno NFE_ConsultaCadastro');
+            console.log(`   ${response.xMotivo}`);
+            console.log('===================================');
+
+            return response
+        } catch (error: any) {
+            throw new Error(`NFE_ConsultaCadastro: ${error.message}`)
         }
     }
 

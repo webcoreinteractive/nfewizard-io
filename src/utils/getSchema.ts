@@ -35,6 +35,7 @@ export const getSchema = (metodo: string) => {
   const schema: SchemaProps = {
     NFEStatusServico: `${pathSchemas}/consStatServ_v4.00.xsd`,
     NFEConsultaProtocolo: `${pathSchemas}/consSitNFe_v4.00.xsd`,
+    ConsultarCadastro: `${pathSchemas}/consCad_v2.00.xsd`,
     RecepcaoEvento: `${pathSchemas}/envEvento_v1.00.xsd`,
     NFeDistribuicaoDFe: `${pathSchemas}/distDFeInt_v1.01.xsd`,
     NFEAutorizacao: `${pathSchemas}/enviNFe_v4.00.xsd`,
